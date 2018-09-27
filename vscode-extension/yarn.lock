@@ -1492,8 +1492,8 @@ vinyl@^2.0.1, vinyl@^2.0.2:
     replace-ext "^1.0.0"
 
 vsce@^1.37.6:
-  version "1.50.0"
-  resolved "https://registry.yarnpkg.com/vsce/-/vsce-1.50.0.tgz#aa8a09f0ea72d2cff17b1efbe9aa61f1c1a47c10"
+  version "1.51.0"
+  resolved "https://registry.yarnpkg.com/vsce/-/vsce-1.51.0.tgz#b47ac82e2fe7b55f72c417aea65784174a8fdbc0"
   dependencies:
     cheerio "^1.0.0-rc.1"
     commander "^2.8.1"
@@ -1534,7 +1534,7 @@ vscode-languageserver-types@3.13.0:
   version "3.13.0"
   resolved "https://registry.yarnpkg.com/vscode-languageserver-types/-/vscode-languageserver-types-3.13.0.tgz#b704b024cef059f7b326611c99b9c8753c0a18b4"
 
-vscode@^1.1.17:
+vscode@^1.1.21:
   version "1.1.21"
   resolved "https://registry.yarnpkg.com/vscode/-/vscode-1.1.21.tgz#1c8253d6238aefb4112d6e58cf975ad25313dafc"
   dependencies:
