@@ -1,0 +1,73 @@
+{
+  "name": "scalafmt",
+  "displayName": "Scalafmt",
+  "description": "Scala code formatter, based on Scalafmt",
+  "keywords": [
+    "scala",
+    "lsp",
+    "language server",
+    "scalafmt",
+    "scalameta"
+  ],
+  "version": "0.1.0",
+  "publisher": "gabro",
+  "contributors": [
+    {
+      "name": "Gabriele Petronella",
+      "url": "https://github.com/gabro"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gabro/scalafmt-lsp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabro/scalafmt-lsp.git"
+  },
+  "homepage": "https://github.com/gabro/scalafmt-lsp.git",
+  "engines": {
+    "vscode": "^1.18.0"
+  },
+  "icon": "images/logo.png",
+  "categories": [
+    "Formatters"
+  ],
+  "activationEvents": [
+    "onLanguage:scala"
+  ],
+  "contributes": {
+    "configuration": {
+      "title": "Scalafmt",
+      "properties": {
+        "scalafmt.serverVersion": {
+          "type": "string",
+          "default": "0.1.0",
+          "description": "The version of the server artifact. Change only if you know what you're doing and reload the editor window."
+        }
+      }
+    }
+  },
+  "main": "./out/extension",
+  "scripts": {
+    "vscode:prepublish": "yarn compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "yarn compile && node ./node_modules/vscode/bin/test",
+    "prebuild": "cp ../README.md . && cp ../LICENSE LICENSE.md",
+    "build": "vsce package",
+    "postbuild": "rm README.md && rm LICENSE.md"
+  },
+  "devDependencies": {
+    "typescript": "^3.0.0",
+    "vsce": "^1.37.6"
+  },
+  "dependencies": {
+    "vscode": "^1.1.17",
+    "vscode-languageclient": "^4.1.3"
+  },
+  "extensionDependencies": [
+    "scala-lang.scala"
+  ]
+}
